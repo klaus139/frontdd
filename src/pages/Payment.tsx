@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 import './payment.css'
 
