@@ -52,7 +52,7 @@ const Payment = () => {
         <div className="payment__bank">
           <h2 className="payment__bank-title">You can also pay using bank transfer.</h2>
           <p className="payment__bank-text">
-            Send the receipt of your payment to our email  <a href="mailto:oleanproject@gmail.com" className="p-text">oleanproject@gmail.com</a> and we will send the file upon confirmation of payment
+            Send the receipt of your payment to our email  <a href="mailto:oleanproject@gmail.com" className="p-text">oleanproject@gmail.com</a> or chat us on whatsapp +2348117830247 and we will send the file upon confirmation of payment
           </p>
           <div className="payment__bank-details">
             <h1 className="payment__bank-name">Bank Details</h1>

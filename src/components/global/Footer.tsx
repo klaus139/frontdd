@@ -15,7 +15,7 @@ const Footer = () => {
       <div className='footer-contact'>
         <h4>Contact Us</h4>
         <p>Email: oleanproject@gmail.com</p>
-        <p>Phone: 080-652-529-45</p>
+        <p>Phone: +234-811-783-0247</p>
         <p>Address: Lagos Nigeria</p>
       </div>
       <div className='footer-social'>
