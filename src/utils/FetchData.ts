@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const postAPI = async (url: string, post: object, token?:string) => {
-    const res = await axios.post(`http://localhost:5000/api/${url}`, post, {
+    const res = await axios.post(`https://olean-backend.onrender.com/api/${url}`, post, {
         headers: { Authorization: token }
     })
     return res;
@@ -9,14 +9,14 @@ export const postAPI = async (url: string, post: object, token?:string) => {
 
 
 export const getAPI = async (url: string, token?:string) => {
-    const res = await axios.get(`http://localhost:5000/api/${url}`, {
+    const res = await axios.get(`https://olean-backend.onrender.com/api/${url}`, {
         headers: { Authorization: token }
     })
     return res;
 }
 
 export const patchAPI = async (url: string, post: object, token?:string) => {
-    const res = await axios.patch(`http://localhost:5000/api/${url}`, post, {
+    const res = await axios.patch(`https://olean-backend.onrender.com/api/${url}`, post, {
         headers: { Authorization: token }
     })
     return res;
@@ -24,7 +24,7 @@ export const patchAPI = async (url: string, post: object, token?:string) => {
 
 
 export const putAPI = async (url: string, post: object, token?:string) => {
-    const res = await axios.put(`http://localhost:5000/api/${url}`, post, {
+    const res = await axios.put(`https://olean-backend.onrender.com/api/${url}`, post, {
       headers: { Authorization: token }
     })
   
