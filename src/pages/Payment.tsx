@@ -11,7 +11,7 @@ const Payment = () => {
   const config = {
     public_key: "FLWPUBK-780ae1d2a68b725031bf70638b214708-X",
     tx_ref: Date.now().toString(),
-    amount: 30,
+    amount: 3000,
     currency: "NGN",
     payment_options: "card,mobilemoney,ussd",
     customer: {
