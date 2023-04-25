@@ -39,6 +39,7 @@ export interface IUser extends IUserLogin {
     avatar: string
     createdAt: string
     name: string
+    number: string
     role: string
     type: string
     updatedAt: string
@@ -77,7 +78,7 @@ export interface IBlog {
     description: string;
     thumbnail: string | File;
     category: string;
-    pdf?: string | File;
+    // pdf: string | File;
     createdAt: string;
   }
   

@@ -62,3 +62,21 @@
   ::-webkit-file-upload-button{
     cursor: pointer;
   }
+
+  .fetch-data div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .btn{
+    margin-top: 5px;
+    background-color: black;
+    color: white;
+    border: 5px;
+    
+  }
+
+
+  
+  
