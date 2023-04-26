@@ -36,11 +36,11 @@ const Contact = () => {
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src="https://nicklaus-portfolio.netlify.app/static/media/email.37b9e890eea501421fbf.png" alt="email" className='imgg' />
-          <a href="mailto:nickoklaus5@gmail.com" className="p-text">nickoklaus5@gmail.com</a>
+          <a href="mailto:oleanproject@gmail.com" className="p-text">oleanproject@gmail.com</a>
         </div>
         <div className="app__footer-card">
           <img src="https://nicklaus-portfolio.netlify.app/static/media/mobile.145d9ce0157a56f8fcd8.png" alt="phone" className='imgg' />
-          <a href="tel:+2348072345624" className="p-text">+2348072345624</a>
+          <a href="tel:+2348117830247" className="p-text">+2348117830247</a>
         </div>
       </div>
       {!isFormSubmitted ? (
