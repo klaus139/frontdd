@@ -65,7 +65,7 @@ const DisplayBlog: React.FC<IProps>= ({blog}) => {
     <div>
     
         <h2 className="text-center my-3 text-capitalize fs-1"
-        style={{color: '#ff7a00'}}>
+        style={{color: '#20063b'}}>
         {blog.title}</h2>
         <div className='text-end fst-italic' style={{color: 'teal'}}>
             <small>
@@ -112,7 +112,7 @@ const DisplayBlog: React.FC<IProps>= ({blog}) => {
         </h5>
       }
       <hr className="my-1" />
-      <h3 style={{color: '#ff7a00'}}>✩ Comments ✩</h3>
+      <h3 style={{color: '#20063b'}}>✩ Comments ✩</h3>
 
       {
         auth.user

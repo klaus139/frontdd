@@ -76,7 +76,9 @@ export interface IBlog {
     title: string;
     content: string;
     description: string;
-    thumbnail: string | File;
+    type: string;
+    pages: string;
+    // thumbnail: string | File;
     category: string;
     // pdf: string | File;
     createdAt: string;

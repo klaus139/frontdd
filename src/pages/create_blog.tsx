@@ -25,7 +25,9 @@ const CreateBlog: React.FC<IProps> = ({id}) =>{
         title: '',
         content: '',
         description: '',
-        thumbnail: '',
+        type: '',
+        pages: '',
+        // thumbnail: '',
         // pdf:'',
         category: '',
         createdAt: new Date().toISOString()
@@ -60,7 +62,9 @@ const CreateBlog: React.FC<IProps> = ({id}) =>{
         title: '',
         content: '',
         description: '',
-        thumbnail: '',
+        type: '',
+        pages: '',
+        // thumbnail: '',
         // pdf:'',
         category: '',
         createdAt: new Date().toISOString()
@@ -122,7 +126,7 @@ const CreateBlog: React.FC<IProps> = ({id}) =>{
 
         <div className='row mt-4'>
           <div className='col-md-6'>
-            <h5>Create</h5>
+            <h5>Create Blog</h5>
             <CreateForm blog={blog} setBlog={setBlog} />
           </div>
 

@@ -16,7 +16,7 @@ const Payment = () => {
     payment_options: "card,mobilemoney,ussd",
     customer: {
       email: blog.user.account,
-      phone_number: blog.user.role,
+      phone_number: blog.user.number,
       name: blog.user.name,
     },
     customizations: {

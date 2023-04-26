@@ -1,0 +1,152 @@
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 200px;
+  }
+  
+  .banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .banner-text {
+    color: rgb(56, 4, 4);
+    font-size: 50px;
+    padding-top: 20px;
+  }
+  
+  .banner-para {
+    color: rgb(26, 4, 61);
+    font-size: 1.5rem;
+  }
+  
+  .banner-div {
+    color: rgb(57, 26, 93);
+    font-size: 2.5rem;
+  }
+  
+  .banner-div p {
+    font-size: 1.5rem;
+  }
+  
+  /* Media query for screens 768px and above */
+  @media (max-width: 768px) {
+    .banner-container {
+      height: 300px;
+    }
+  
+    .banner-text {
+      font-size: 30px;
+      padding-top: 40px;
+    }
+  
+    .banner-para {
+      font-size: 1rem;
+    }
+  
+    .banner-div {
+      font-size: 1rem;
+    }
+  
+    .banner-div p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 498px) {
+    .banner-container {
+      height: 100px;
+    }
+  
+    .banner-text {
+      font-size: 20px;
+      padding-top: 20px;
+      display: none
+     
+    }
+  
+    .banner-para {
+      font-size: 1rem;
+      
+    }
+  
+    .banner-div {
+      font-size: 10px;
+      display: none
+    }
+  
+    .banner-div p {
+      font-size: 1rem;
+      display: none
+   
+    }
+  }
+  @media (max-width: 498px) {
+    .banner-container {
+      height: 100px;
+    }
+  
+    .banner-text {
+      font-size: 20px;
+      padding-top: 20px;
+      display: none
+     
+    }
+  
+    .banner-para {
+      font-size: 1rem;
+      
+    }
+  
+    .banner-div {
+      font-size: 10px;
+      display: none
+    }
+  
+    .banner-div p {
+      font-size: 1rem;
+      display: none
+   
+    }
+  }
+  @media (max-width: 1200px) {
+    .banner-container {
+      height: 100px;
+    }
+  
+    .banner-text {
+      font-size: 20px;
+      padding-top: 20px;
+      display: none
+     
+    }
+  
+    .banner-para {
+      font-size: 1rem;
+      
+    }
+  
+    .banner-div {
+      font-size: 10px;
+      display: none
+    }
+  
+    .banner-div p {
+      font-size: 1rem;
+      display: none
+   
+    }
+  }
+  

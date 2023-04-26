@@ -9,14 +9,7 @@ interface IProps {
 const CardVert: React.FC<IProps> = ({ blog }) => {
   return (
     <div className="card">
-      {typeof blog.thumbnail === 'string' && (
-        <img
-          src={blog.thumbnail}
-          className="card-img-top"
-          alt="..."
-          style={{ height: '180px', objectFit: 'cover' }}
-        />
-      )}
+     
 
       <div className="card-body">
         <h5 className="card-title">
@@ -28,6 +21,7 @@ const CardVert: React.FC<IProps> = ({ blog }) => {
           </Link>
         </h5>
         <p className="card-text">{blog.description.slice(0, 100) + '...'}</p>
+        <p>Read More...</p>
 
         <p className="card-text d-flex justify-content-between">
           <small className="text-muted text-capitalize">
@@ -37,13 +31,20 @@ const CardVert: React.FC<IProps> = ({ blog }) => {
                 to={`#`}
                 style={{ textDecoration: 'none', textTransform: 'capitalize' }}
               >
-                By: {blog.user.name}
+                <span style={{font:"menu"}}>By: {blog.user.name}</span>
               </Link>
             }
           </small>
+          <small className='text-muted'>
+            <span style={{font:"initial"}}>Aritcle type</span> {blog.type}
+          </small>
+
+          <small className='text-muted'>
+            <span style={{font: 'initial'}}>{blog.pages} pages</span>
+          </small>
 
           <small className="text-muted">
-            {new Date(blog.createdAt).toLocaleString()}
+           <span style={{font: "initial"}}>{new Date(blog.createdAt).toLocaleString()}</span> 
           </small>
         </p>
       </div>

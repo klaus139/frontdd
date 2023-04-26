@@ -12,6 +12,7 @@ import { getHomeBlogs } from './redux/actions/blogAction';
 
 import io from 'socket.io-client'
 import SocketClient from './SocketClient'
+import Banner from './components/banner/Banner';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Router>
         <Alert />
       <Header />
+      <Banner />
         <Routes>
           <Route path="/" element={<PageRender />} />
           <Route path="/:page" element={<PageRender />} />

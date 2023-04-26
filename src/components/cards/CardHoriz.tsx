@@ -32,7 +32,7 @@ const CardHoriz: React.FC<IProps> = ({blog}) => {
   return (
     <div className="card mb-3" style={{minWidth: "260px"}}>
       <div className="row g-0 p-2">
-        <div className="col-md-4" style={{
+        {/* <div className="col-md-4" style={{
           minHeight: '150px', maxHeight: '170px', overflow: 'hidden'
         }}>
           {
@@ -52,7 +52,7 @@ const CardHoriz: React.FC<IProps> = ({blog}) => {
             </>
           }
           
-        </div>
+        </div> */}
         
         <div className="col-md-8">
           <div className="card-body">
@@ -63,6 +63,8 @@ const CardHoriz: React.FC<IProps> = ({blog}) => {
               </Link>
             </h5>
             <p className="card-text">{blog.description}</p>
+            <p className="card-text">{blog.type}</p>
+            <p className='card-text'>{blog.pages}</p>
 
             {
               blog.title &&
@@ -83,6 +85,8 @@ const CardHoriz: React.FC<IProps> = ({blog}) => {
                 <small className="text-muted">
                   {new Date(blog.createdAt).toLocaleString()}
                 </small>
+               
+               
               </div>
             }
           </div>

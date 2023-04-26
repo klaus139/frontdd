@@ -47,7 +47,7 @@ export function validateEmail(email: string) {
 
 //Valid Blog
 export const validCreateBlog = ({
-  title, content, description, thumbnail, category, 
+  title, content, description, type, pages, category, 
 }: IBlog) => {
   const err: string[] = []
 
@@ -67,13 +67,21 @@ export const validCreateBlog = ({
     err.push("Description is up to 300 characters long.")
   }
 
-  if(!thumbnail){
-    err.push("Thumbnail cannot be left blank.")
-  }
+  // if(!thumbnail){
+  //   err.push("Thumbnail cannot be left blank.")
+  // }
  
 
   if(!category){
     err.push("Category cannot be left blank.")
+  }
+
+  if(!type){
+    err.push("Please state the type of article.")
+  }
+
+  if(!pages){
+    err.push("Pages count must be filled.")
   }
 
   return {

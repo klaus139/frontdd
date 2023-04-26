@@ -1,23 +1,23 @@
 import { Dispatch } from 'redux'
 import {IBlog} from '../../utils/Type';
 import { ALERT, IAlertType } from '../types/alertType';
-import { imageUpload} from '../../utils/ImageUpload';
+//import { imageUpload} from '../../utils/ImageUpload';
 import { deleteAPI, getAPI, postAPI, putAPI } from '../../utils/FetchData';
 import { DELETE_BLOGS_USER_ID, GET_BLOGS_CATEGORY_ID, GET_BLOGS_USER_ID, GET_HOME_BLOGS, IDeleteBlogsUserType, IGetBlogsCategoryType, IGetBlogsUserType, IGetHomeBlogsType } from '../types/blogType';
 import { checkTokenExp } from '../../utils/checkTokenExp';
 
 export const createBlog = (blog: IBlog, token: string) => 
     async(dispatch: Dispatch<IAlertType>) => {
-        let url;
+        // let url;
         try{
             dispatch({ type: ALERT, payload: {loading: true}})
             
-            if(typeof(blog.thumbnail) !== 'string'){
-                const photo = await imageUpload(blog.thumbnail)
-                url = photo.url
-            } else {
-                url = blog.thumbnail
-            }
+            // if(typeof(blog.thumbnail) !== 'string'){
+            //     const photo = await imageUpload(blog.thumbnail)
+            //     url = photo.url
+            // } else {
+            //     url = blog.thumbnail
+            // }
 
             // if (blog.pdf && typeof(blog.pdf) !== 'string') {
             //   const file:any = await uploadPDF(blog.pdf);
@@ -26,7 +26,7 @@ export const createBlog = (blog: IBlog, token: string) =>
             //   url = blog.pdf;
             // }
             
-            const newBlog = {...blog, thumbnail:url}
+            const newBlog = {...blog}
             const res = await postAPI('blog', newBlog, token)
             dispatch({ type: ALERT, payload: {success: res.data.msg} })
             
@@ -104,18 +104,18 @@ export const updateBlog = (blog: IBlog, token: string) =>
 async (dispatch: Dispatch<IAlertType>) => {
   const result = await checkTokenExp(token, dispatch)
   const access_token = result ? result : token
-  let url;
+  // let url;
   try {
     dispatch({ type: ALERT, payload: { loading: true } })
     
-    if(typeof(blog.thumbnail) !== 'string'){
-      const photo = await imageUpload(blog.thumbnail)
-      url = photo.url
-    }else{
-      url = blog.thumbnail
-    }
+    // if(typeof(blog.thumbnail) !== 'string'){
+    //   const photo = await imageUpload(blog.thumbnail)
+    //   url = photo.url
+    // }else{
+    //   url = blog.thumbnail
+    // }
     
-    const newBlog = {...blog, thumbnail: url}
+    const newBlog = {...blog}
 
     const res = await putAPI(`blog/${newBlog._id}`, newBlog, access_token)
 
