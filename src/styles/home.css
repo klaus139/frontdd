@@ -1,4 +1,4 @@
-/* .home_page {
+.home_page {
     width: 100%;
     margin: 1rem 0;
   }
@@ -22,8 +22,8 @@
   
   .home_blogs{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    
     margin-bottom: 15px;
-  } */
+  }

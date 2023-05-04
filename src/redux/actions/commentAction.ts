@@ -45,7 +45,7 @@ export const getComments = (
   try {
     let limit = 4;
 
-    const res = await getAPI(`comments/blog/${id}?page=${num}&limit=${limit}`)
+    const res = await getAPI(`comments/project/${id}?page=${num}&limit=${limit}`)
 
     dispatch({
       type: GET_COMMENTS,

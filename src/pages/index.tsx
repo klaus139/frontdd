@@ -20,12 +20,12 @@ const Home = () => {
     <div className='home_page'>
       {
         homeBlogs.map(homeBlog => (
-          <div key={homeBlog._id}>
+          <div key={homeBlog._id} >
             {
               homeBlog.count > 0 &&
               <>
               <h3>
-                <Link to={`/blogs/${(homeBlog.name).toLowerCase()}`}>
+                <Link to={`/projects/${(homeBlog.name).toLowerCase()}`}>
                   {homeBlog.name} <small>{homeBlog.count}</small>
                 </Link>
               </h3>
@@ -44,7 +44,7 @@ const Home = () => {
             {
               homeBlog.count > 4 && 
               <Link className='text-right d-block my-2 mb-3'
-              to={`/blogs/${homeBlog.name}`}>
+              to={`/projects/${homeBlog.name}`}>
                 Read more &gt;&gt;
               </Link>
             }

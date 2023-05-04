@@ -49,7 +49,7 @@ const CreateBlog: React.FC<IProps> = ({id}) =>{
     useEffect(() => {
       if(!id) return;
   
-      getAPI(`blog/${id}`)
+      getAPI(`project/${id}`)
       .then(res => {
         setBlog(res.data)
         setBody(res.data.content)
@@ -113,7 +113,7 @@ const CreateBlog: React.FC<IProps> = ({id}) =>{
         dispatch(createBlog(newData, auth.access_token)as unknown as any)
         return dispatch({
           type: ALERT,
-          payload: {success: 'Blog created successfully'}
+          payload: {success: 'Article created successfully'}
         })
       }
     }
@@ -126,7 +126,7 @@ const CreateBlog: React.FC<IProps> = ({id}) =>{
 
         <div className='row mt-4'>
           <div className='col-md-6'>
-            <h5>Create Blog</h5>
+            <h5>Create Article</h5>
             <CreateForm blog={blog} setBlog={setBlog} />
           </div>
 

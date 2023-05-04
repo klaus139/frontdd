@@ -118,7 +118,7 @@ const DisplayBlog: React.FC<IProps>= ({blog}) => {
         auth.user
         ? <Input callback={handleComment} />
         : <h5>
-          Please <Link to={`/login?blog/${blog._id}`}>login</Link> to comment.
+          Please <Link to={`/login?project/${blog._id}`}>login</Link> to comment.
         </h5>
       }
       {

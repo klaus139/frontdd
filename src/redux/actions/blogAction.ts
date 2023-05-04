@@ -27,7 +27,8 @@ export const createBlog = (blog: IBlog, token: string) =>
             // }
             
             const newBlog = {...blog}
-            const res = await postAPI('blog', newBlog, token)
+            const res = await postAPI('project', newBlog, token)
+            console.log(res)
             dispatch({ type: ALERT, payload: {success: res.data.msg} })
             
             dispatch({ type: ALERT, payload: { loading: false }})
@@ -44,7 +45,7 @@ export const getHomeBlogs = () =>
         try{
             dispatch({ type: ALERT, payload: {loading: true}})
             
-            const res = await getAPI('home/blogs')
+            const res = await getAPI('home/projects')
             dispatch({
                 type: GET_HOME_BLOGS,
                 payload: res.data 
@@ -65,7 +66,7 @@ export const getHomeBlogs = () =>
             console.log(value)
             dispatch({ type: ALERT, payload: {loading: true}})
             
-            const res = await getAPI(`blogs/category/${id}${value}&limit=${limit}`)
+            const res = await getAPI(`projects/category/${id}${value}&limit=${limit}`)
         
           dispatch({
             type: GET_BLOGS_CATEGORY_ID,
@@ -86,7 +87,7 @@ async (dispatch: Dispatch<IAlertType | IGetBlogsUserType>) => {
 
     dispatch({ type: ALERT, payload: { loading: true } })
 
-    const res = await getAPI(`blogs/user/${id}${value}&limit=${limit}`)
+    const res = await getAPI(`projects/user/${id}${value}&limit=${limit}`)
 
     dispatch({
       type: GET_BLOGS_USER_ID,
@@ -117,7 +118,7 @@ async (dispatch: Dispatch<IAlertType>) => {
     
     const newBlog = {...blog}
 
-    const res = await putAPI(`blog/${newBlog._id}`, newBlog, access_token)
+    const res = await putAPI(`project/${newBlog._id}`, newBlog, access_token)
 
     dispatch({ type: ALERT, payload: { success: res.data.msg } })
   } catch (err: any) {
@@ -136,7 +137,7 @@ async (dispatch: Dispatch<IAlertType | IDeleteBlogsUserType>) => {
       payload: blog
     })
 
-    await deleteAPI(`blog/${blog._id}`, access_token)
+    await deleteAPI(`project/${blog._id}`, access_token)
 
   } catch (err: any) {
     dispatch({ type: ALERT, payload: {errors: err.response.data.msg} })

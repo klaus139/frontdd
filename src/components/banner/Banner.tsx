@@ -3,16 +3,22 @@ import bannerImg from '../../constants';
 import './banner.css';
 
 const Banner = () => {
+
+  const mainFeaturedPost = {
+    title: "Olean Project",
+    description:
+      "Find What You Want",
+    image: 'https://source.unsplash.com/random/?library',
+    imageText: 'Welcome to the World of Research',
+    //linkText: 'Continue reading…',
+  };
+
   return (
     <div className="banner-container">
-      <img src={bannerImg} alt="Main banner" className="banner-img" />
+      <img className="banner-img" src={mainFeaturedPost.image} alt="banner" />
       <div className="banner-content">
-        {/* <p className="banner-text">Olean Project</p> */}
-        <p className="banner-para">Get Your Project materials, Research Materials and E-Books</p>
-        <div className="banner-div">
-          <h1>Project Topics, Project Thesis, Edu Materials and lots more</h1>
-          
-        </div>
+        <h1 className="banner-text">{mainFeaturedPost.title}</h1>
+        <p className="banner-para">{mainFeaturedPost.description}</p>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ const DetailBlog = () => {
   useEffect(() => {
     if (!slug) return;
     setLoading(true);
-    getAPI(`blog/${slug}`)
+    getAPI(`project/${slug}`)
       .then((res) => {
         
         setBlog(res.data);

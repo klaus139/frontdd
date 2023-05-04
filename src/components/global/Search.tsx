@@ -34,8 +34,10 @@ const Search = () => {
   },[pathname])
 
   return (
-    <div className="search w-100 position-relative me-4">
-      <input type="text" className="form-control me-2 w-100"
+    <div className="flex w-full position-relative me-4">
+      <div className='flex border-gray position-relative'>
+      <p className='pt-2 fs-4 fw-bolder'>Project Works, research Topics, Seminar Documents and lots of Research and Educational Materials Available in Ms word format</p>
+      <input type="text" className="form-control align-center w-full me-2"
       value={search} placeholder="Enter your search..."
       onChange={e => setSearch(e.target.value)}  />
 
@@ -56,6 +58,7 @@ const Search = () => {
           }
         </div>
       }
+      </div>
     </div>
   )
 }

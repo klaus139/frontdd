@@ -93,7 +93,7 @@ const Payment = () => {
               Account Name : <span>Olean ltd</span>
             </p>
             <p className="payment__bank-info">
-              Account Number : <span>2033124513</span>
+              Account Number : <span>L</span>
             </p>
           </div>
         </div>

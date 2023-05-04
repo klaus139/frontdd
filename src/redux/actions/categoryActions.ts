@@ -21,7 +21,7 @@ async(dispatch: Dispatch<IAlertType | ICategoryType>) => {
   try {
     dispatch({ type: ALERT, payload: { loading: true }})
 
-    const res = await postAPI('category', { name }, access_token)
+    const res = await postAPI('department', { name }, access_token)
 
     dispatch({
       type: CREATE_CATEGORY,
@@ -39,7 +39,7 @@ async(dispatch: Dispatch<IAlertType | ICategoryType>) => {
   try {
     dispatch({ type: ALERT, payload: { loading: true }})
 
-    const res = await getAPI('category')
+    const res = await getAPI('department')
     
     dispatch({
       type: GET_CATEGORIES,
@@ -60,7 +60,7 @@ async(dispatch: Dispatch<IAlertType | ICategoryType>) => {
 
     dispatch({ type: UPDATE_CATEGORY, payload: data })
 
-    await patchAPI(`category/${data._id}`, { 
+    await patchAPI(`department/${data._id}`, { 
       name: data.name 
     }, access_token)
 
@@ -76,7 +76,7 @@ async(dispatch: Dispatch<IAlertType | ICategoryType>) => {
   try {
     
     dispatch({ type: DELETE_CATEGORY, payload: id })
-    await deleteAPI(`category/${id}`, access_token)
+    await deleteAPI(`department/${id}`, access_token)
 
   } catch (err: any) {
     dispatch({ type: ALERT, payload: { errors: err.response.data.msg }})

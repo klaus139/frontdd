@@ -7,7 +7,7 @@ const Footer = () => {
     <div className='footer-container'>
       <div className='footer-info'>
         <h4>Welcome to Olean Project</h4>
-        <p>We are a team of passionate developers who strive to provide solutions for researchers and students looking for research materials.</p>
+        <p>We strive to provide solutions for researchers and students looking for research materials.</p>
         <a href="/" target="_blank" rel='noreferrer'>
           Find what you want
         </a>

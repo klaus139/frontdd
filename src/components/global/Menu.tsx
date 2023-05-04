@@ -12,13 +12,25 @@ const Menu = () => {
   const { pathname } = useLocation();
 
   const bfLoginLinks = [
+    { label: "About", path: "/aboutus" },
+    { label: "Project Departments", path: "/departments" },
+    { label: "Payment", path: "/aboutpayment" },
+    // { label: "About", path: "/aboutus" },
+    { label: "Contact", path: "/contact" },
     { label: "Login", path: "/login" },
     { label: "Register", path: "/register" },
+   
+   
   ];
 
   const afLoginLinks = [
     { label: "About", path: "/aboutus" },
+  
+    // { label: "Home", path: "/" },
     { label: "Contact", path: "/contact" },
+    { label: "project departments", path: "/departments" },
+    { label: "Payment", path: "/aboutpayment" },
+    
   ];
 
   const navLinks = auth.access_token ? afLoginLinks : bfLoginLinks;
@@ -56,7 +68,7 @@ const Menu = () => {
       {auth.user?.role === "admin" && (
         <li className={`nav-item ${isActive("/create_blog")}`}>
           <Link to="/create_blog" className="nav-link">
-            CreateBlog
+            CreateArticle
           </Link>
         </li>
       )}

@@ -13,6 +13,9 @@ import { getHomeBlogs } from './redux/actions/blogAction';
 import io from 'socket.io-client'
 import SocketClient from './SocketClient'
 import Banner from './components/banner/Banner';
+import Search from './components/global/Search';
+//import Sidebar from './components/sidebar/Sidebar';
+//import Sidebar from './components/sidebar/Sidebar';
 
 
 function App() {
@@ -30,11 +33,14 @@ function App() {
   },[dispatch])
 
   return (
-    <div className="container"> 
+    <div className="container" id="page-wrap"> 
     <SocketClient />   
       <Router>
         <Alert />
       <Header />
+      <Search />
+    
+      
       <Banner />
         <Routes>
           <Route path="/" element={<PageRender />} />
